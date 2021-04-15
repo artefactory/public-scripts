@@ -3,7 +3,7 @@
 
 //Constants that you need to update!
 //Spreadsheet id (taken from the URL, see notes for more info on this)
-var SPREADSHEET_ID = "1X_ztpOxrRS-wsT5r2pstS7oUK4ZrMdDczEsRJ5_qiXQ";
+var SPREADSHEET_ID = "UPDATE_THIS_HERE";
 
 //You must add your Page Speed Insights API key or the script will not work
 //Click File -> Project Properties
