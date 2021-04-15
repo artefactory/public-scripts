@@ -401,7 +401,7 @@ function getFIDCategory(data) {
 
 function getPercentileCLS(data) {
   if(data.loadingExperience.metrics) {
-    return data.loadingExperience.metrics.CUMULATIVE_LAYOUT_SHIFT_SCORE.percentile;
+    return data.loadingExperience.metrics.CUMULATIVE_LAYOUT_SHIFT_SCORE.percentile / 100;
   } else {
     return "N/A";
   }
