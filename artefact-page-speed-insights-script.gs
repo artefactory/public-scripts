@@ -200,22 +200,22 @@ function addRow(url, desktop, mobile, desktopParsedData, mobileParsedData) {
     Utilities.formatDate(new Date(), 'GMT', 'yyyy-MM-dd'),
     url,
     checkForCruxData(url, desktop),
-    getMedianFCP(desktop),
+    getPercentileFCP(desktop),
     getFastFCP(desktop),
     getMediumFCP(desktop),
     getSlowFCP(desktop),
     getFCPCategory(desktop),
-    getMedianFID(desktop),
+    getPercentileFID(desktop),
     getFastFID(desktop),
     getMediumFID(desktop),
     getSlowFID(desktop),
     getFIDCategory(desktop),
-    getMedianCLS(desktop),
+    getPercentileCLS(desktop),
     getFastCLS(desktop),
     getMediumCLS(desktop),
     getSlowCLS(desktop),
     getCLSCategory(desktop),
-    getMedianLCP(desktop),
+    getPercentileLCP(desktop),
     getFastLCP(desktop),
     getMediumLCP(desktop),
     getSlowLCP(desktop),
@@ -253,22 +253,22 @@ function addRow(url, desktop, mobile, desktopParsedData, mobileParsedData) {
     getGarbageCollectionTime(desktopParsedData),
     getOtherTime(desktopParsedData),
     checkForCruxData(url, mobile),
-    getMedianFCP(mobile),
+    getPercentileFCP(mobile),
     getFastFCP(mobile),
     getMediumFCP(mobile),
     getSlowFCP(mobile),
     getFCPCategory(mobile),
-    getMedianFID(mobile),
+    getPercentileFID(mobile),
     getFastFID(mobile),
     getMediumFID(mobile),
     getSlowFID(mobile),
     getFIDCategory(mobile),
-    getMedianCLS(mobile),
+    getPercentileCLS(mobile),
     getFastCLS(mobile),
     getMediumCLS(mobile),
     getSlowCLS(mobile),
     getCLSCategory(mobile),
-    getMedianLCP(mobile),
+    getPercentileLCP(mobile),
     getFastLCP(mobile),
     getMediumLCP(mobile),
     getSlowLCP(mobile),
@@ -318,7 +318,7 @@ function checkForCruxData(url, data) {
   }
 }
 
-function getMedianFCP(data) {
+function getPercentileFCP(data) {
   if(data.loadingExperience.metrics) {
     return data.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.percentile;
   } else {
@@ -359,7 +359,7 @@ function getFCPCategory(data) {
 }
 
 
-function getMedianFID(data) {
+function getPercentileFID(data) {
   if(data.loadingExperience.metrics) {
     return data.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.percentile;
   } else {
@@ -399,7 +399,7 @@ function getFIDCategory(data) {
   }
 }
 
-function getMedianCLS(data) {
+function getPercentileCLS(data) {
   if(data.loadingExperience.metrics) {
     return data.loadingExperience.metrics.CUMULATIVE_LAYOUT_SHIFT_SCORE.percentile;
   } else {
@@ -439,7 +439,7 @@ function getCLSCategory(data) {
   }
 }
 
-function getMedianLCP(data) {
+function getPercentileLCP(data) {
   if(data.loadingExperience.metrics) {
     return data.loadingExperience.metrics.LARGEST_CONTENTFUL_PAINT_MS.percentile;
   } else {
