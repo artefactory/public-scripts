@@ -252,6 +252,7 @@ function addRow(url, desktop, mobile, desktopParsedData, mobileParsedData) {
     getPaintCompositeRenderTime(desktopParsedData),
     getGarbageCollectionTime(desktopParsedData),
     getOtherTime(desktopParsedData),
+    checkForCruxData(url, mobile),
     getMedianFCP(mobile),
     getFastFCP(mobile),
     getMediumFCP(mobile),
